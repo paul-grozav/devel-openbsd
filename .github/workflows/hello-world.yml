@@ -15,3 +15,9 @@ jobs:
 
     - name: Print Hello World
       run: echo "Hello, World!"
+
+    - name: PWD
+      run: pwd
+
+    - name: List files
+      run: ls -l
