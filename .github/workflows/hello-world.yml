@@ -1,0 +1,17 @@
+name: Hello World Action
+
+# Triggers the workflow on push to the 'main' branch
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  say-hello:
+    runs-on: github-runner-9XulJZPvgQIOe
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Print Hello World
+      run: echo "Hello, World!"
