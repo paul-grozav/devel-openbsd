@@ -20,4 +20,7 @@ jobs:
       run: pwd
 
     - name: List files
-      run: ls -l
+      run: ls -la
+
+    - name: multiple
+      run: env && cat /etc/os-release
