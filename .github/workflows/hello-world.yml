@@ -9,18 +9,18 @@ on:
 jobs:
   say-hello:
     runs-on: self-hosted
+    container:
+      image: alpine:3.18.3
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
-    - name: Print Hello World
-      run: echo "Hello, World!"
-
-    - name: PWD
-      run: pwd
-
-    - name: List files
-      run: ls -la
-
     - name: multiple
-      run: env && cat /etc/os-release
+      run: |
+        pwd &&
+        echo "---" &&
+        ls -la &&
+        echo "---" &&
+        env &&
+        echo "---" &&
+        cat /etc/os-release &&
+        true
